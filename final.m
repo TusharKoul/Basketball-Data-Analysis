@@ -1,5 +1,5 @@
 %import useful data from data.xlsx file
-DATA = xlsread('data');
+DATA = xlsread('made');
 [tot_samples,inputs] = size(DATA);
 
 %Non-normalized data will be in capital letters
@@ -56,11 +56,4 @@ for i = 1:length(diff_players)
 end
 clear i j
 
-
-%%
-%plot the data
-figure(1)
-for i = 1:3
-    subplot(3,1,i)
-    histogram(effects(:,i)) %plotting the normalized data
-end
+save total.mat SAMPLES EFFECTS effects
