@@ -1,5 +1,5 @@
 %import useful data from data.xlsx file
-DATA = xlsread('made');
+DATA = xlsread('data');
 [tot_samples,inputs] = size(DATA);
 
 %Non-normalized data will be in capital letters
@@ -56,4 +56,4 @@ for i = 1:length(diff_players)
 end
 clear i j
 
-save total.mat SAMPLES EFFECTS effects
+save total.mat SAMPLES EFFECTS effects SHOT
